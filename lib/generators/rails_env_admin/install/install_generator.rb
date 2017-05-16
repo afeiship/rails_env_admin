@@ -21,7 +21,6 @@ module RailsEnvAdmin
         template 'config/locales/zh-CN.yml','config/locales/zh-CN.yml'
       end
 
-
       def create_routes
         route "match 'sessions/new' => 'rails_env_admin/sessions/new', via: :get"
         route "match 'sessions/create' => 'rails_env_admin/sessions/create', via: :post"

@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
       "public gem pushes."
   end
 
-  spec.files = Dir['Gemfile', 'LICENSE', 'README.md', 'lib/**/*', 'app/**/*']
+  spec.files = `git ls-files`.split("n")
 
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
