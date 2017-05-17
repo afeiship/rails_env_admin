@@ -1,27 +1,17 @@
-require 'rails'
+## i18n config:
+Rails.application.config.i18n.available_locales = [:en, :'zh-CN']
+Rails.application.config.i18n.default_locale = (ENV['LOCALE'] || 'zh-CN').to_sym
 
+## timezone:
+Rails.application.config.time_zone = 'Beijing'
 
-module RailsEnvAdmin
-  class Application < Rails::Application
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
+## password filter:
+Rails.application.config.action_controller.action_on_unpermitted_parameters = :log
+Rails.application.config.filter_parameters += [:password]
 
-    ## i18n config:
-    config.i18n.available_locales = [:en, :'zh-CN']
-    config.i18n.default_locale = (ENV['LOCALE'] || 'zh-CN').to_sym
-    config.time_zone = 'Beijing'
-
-    ## password filter:
-    config.action_controller.action_on_unpermitted_parameters = :log
-    config.filter_parameters += [:password]
-
-    # generators config:
-    config.generators do |generator|
-      generator.test_framework false
-      generator.helper false
-      generator.assets false
-    end
-
-  end
+# generators config:
+Rails.application.config.generators do |generator|
+  generator.test_framework false
+  generator.helper false
+  generator.assets false
 end
