@@ -6,11 +6,20 @@
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rails_env_admin'
+gem "rails_env_admin", :git=>"git@github.com:afeiship/rails_env_admin.git"
 ```
 
 ## usage:
 + git@github.com:afeiship/rails_env_admin.git
++ if login:
+```erb
+<h1>Welcome!</h1>
+<% if session[:login] %>
+    <p>login success!</p>
+<% else %>
+    <p>You have not login</p>
+<% end %>
+```
 
 ## resource:
 + https://www.smashingmagazine.com/2011/06/a-guide-to-starting-your-own-rails-engine-gem/
