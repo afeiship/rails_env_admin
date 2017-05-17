@@ -1,4 +1,4 @@
-# RailsEnvAdmin
+# rails_env_admin
 > Rails single admin stored in ENV session.
 
 ## installation
