@@ -22,9 +22,9 @@ module RailsEnvAdmin
       end
 
       def create_routes
-        route "match 'sessions/new' => 'rails_env_admin/sessions/new', via: :get"
-        route "match 'sessions/create' => 'rails_env_admin/sessions/create', via: :post"
-        route "match 'sessions/destroy' => 'rails_env_admin/sessions/destroy', via: :delete"
+        # route "match 'sessions/new' => 'rails_env_admin/sessions/new', via: :get"
+        # route "match 'sessions/create' => 'rails_env_admin/sessions/create', via: :post"
+        # route "match 'sessions/destroy' => 'rails_env_admin/sessions/destroy', via: :delete"
       end
 
     end

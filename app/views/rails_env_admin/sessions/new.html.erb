@@ -10,7 +10,7 @@
     <!--static files end-->
 </head>
 <body>
-    <%= form_tag({controller: "sessions", action: "create", method: :post},{ class:'rails-env-admin-signin'}) do %>
+    <%= form_tag({controller: "sessions", action: "create", method: :post },{ class:'rails-env-admin-signin'}) do %>
         <div class="field">
             <label for="username">Username:</label><br>
             <%= text_field_tag :username %><br>

@@ -2,12 +2,15 @@
 > Rails single admin stored in ENV session.
 
 ## installation
-
-Add this line to your application's Gemfile:
-
++ Add this line to your application's Gemfile:
 ```ruby
 gem "rails_env_admin", :git=>"git@github.com:afeiship/rails_env_admin.git"
 ```
++ basic config:
+```bash
+rails g rails_env_admin:install
+```
+
 
 ## usage:
 + git@github.com:afeiship/rails_env_admin.git
