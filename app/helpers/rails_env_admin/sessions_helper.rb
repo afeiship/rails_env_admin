@@ -17,7 +17,7 @@ module RailsEnvAdmin
 
     def authericate_user!
       if signed_in?
-        flash[:error] = t('rails_env_admin.login_first')
+        flash[:info] = t('rails_env_admin.login_first')
         cookies[:urlback] = request.original_url
         redirect_to :root
       end

@@ -9,16 +9,16 @@ module RailsEnvAdmin
 
     def create
       if ENV['ADMIN_USER'].blank?
-        flash.now[:alert] = t('rails_env_admin.no_configuration')
+        flash.now[:error] = t('rails_env_admin.no_configuration')
         render :new
       elsif ENV['ADMIN_USER'] != params[:username]
-        flash.now[:alert] = t('rails_env_admin.username_error')
+        flash.now[:error] = t('rails_env_admin.username_error')
         render :new
       elsif ENV['ADMIN_PASSWORD'] != params[:password]
-        flash.now[:alert] = t('rails_env_admin.password_error')
+        flash.now[:error] = t('rails_env_admin.password_error')
         render :new
       else
-        flash[:notice] = t('rails_env_admin.login_success')
+        flash[:success] = t('rails_env_admin.login_success')
         session[:login] = true
         redirect_to :root
       end
