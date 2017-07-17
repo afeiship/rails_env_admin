@@ -1,8 +1,17 @@
 .rails-env-admin-signin{
     width:40%;
-    margin: 0 auto;
-    border:10px solid #f00;
+    margin: 50px auto;
     > .field{
+        font-size:14px;
         margin: 0 0 20px 0;
+
+        input{
+            padding:4px 10px;
+            border:1px solid #ccc;
+            border-radius: 4px;
+            &:focus{
+                outline: none;
+            }
+        }
     }
 }
