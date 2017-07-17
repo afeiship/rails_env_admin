@@ -4,6 +4,7 @@ require 'rails'
 module RailsEnvAdmin
 
   module SessionsHelper
+    
     def sign_out
       session[:login] = nil
       redirect_to :root
@@ -16,7 +17,7 @@ module RailsEnvAdmin
 
     def authericate_user!
       if signed_in?
-        flash[:error] = '请先登录后台管理'
+        flash[:error] = t('rails_env_admin.login_first')
         cookies[:urlback] = request.original_url
         redirect_to :root
       end

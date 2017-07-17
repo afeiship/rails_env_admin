@@ -10,3 +10,4 @@ zh-CN:
     no_configuration: '系统未配置管理员, 无法登录'
     username_error: '用户名错误'
     password_error: '密码错误'
+    login_first: '请先登录后台管理'
